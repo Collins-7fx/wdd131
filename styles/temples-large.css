@@ -1,0 +1,19 @@
+/* --Loads at 700px-- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  gap: 1rem;
+}
+
+main {
+  grid-template-columns: repeat(3, 1fr);
+}

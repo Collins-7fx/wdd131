@@ -1,0 +1,115 @@
+/* --Base-- */
+:root{
+    --primary: #1f3a5f;
+    --accent: #c9a227;
+    --light: #f6f3ec;
+    --text: #222;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier Prime", monospace;
+  background-color: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, nav a {
+  font-family: "Oswald", sans-serif;
+}
+
+/* --Header and Footer-- */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* --Nav-- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+/* --Main-- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* --Figures-- */
+figure {
+  margin: 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+figure img {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+  display: block;
+  transition: transform 0.4s;
+}
+
+figure:hover img {
+  transform: scale(1.05);
+}
+
+figcaption {
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+}
+
