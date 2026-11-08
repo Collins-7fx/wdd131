@@ -1,25 +1,27 @@
 /* --Loads at 700px-- */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
+@media (min-width: 700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
 
-header h1 {
-  margin: 0;
-}
+  .site-title {
+    margin: 0;
+  }
 
-#menu{
+  #menu {
     display: none;
-}
+  }
 
-nav {
+  nav {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-}
+  }
 
-main {
-  grid-template-columns: repeat(3, 1fr);
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

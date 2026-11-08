@@ -3,7 +3,9 @@
     --primary: #1f3a5f;
     --accent: #c9a227;
     --light: #f6f3ec;
-    --text: #222;
+    --text: #222222;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.2);
 }
 
 *{
@@ -18,27 +20,30 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, nav a {
+h1, h2,
+.site-title,
+nav a {
   font-family: "Oswald", sans-serif;
 }
 
 /* --Header and Footer-- */
 header {
   background-color: var(--primary);
-  color: white;
+  color: var(--white);
   padding: 1rem;
   text-align: center;
 }
 
-header h1 {
+.site-title{
   margin: 0 0 1rem;
   font-size: 2.2rem;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
 footer {
   background-color: var(--primary);
-  color: white;
+  color: var(--white);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
@@ -53,9 +58,9 @@ footer p {
     display: block;
     margin: 0 auto 1rem;
     background: none;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 4px;
-    color: white;
+    color: var(--white);
     font-size: 1.8rem;
     line-height: 1;
     padding: 0.25rem 0.75rem;
@@ -65,7 +70,7 @@ footer p {
 #menu:hover{
     background-color: var(--accent);
     border-color: var(--accent);
-    color: var(--primary)
+    color: var(--primary);
 }
 
 nav {
@@ -75,8 +80,12 @@ nav {
   gap: 0.5rem;
 }
 
+nav.open{
+    display: flex;
+}
+
 nav a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
@@ -103,21 +112,22 @@ main {
 main h1 {
   grid-column: 1 / -1;
   text-align: center;
+  color: var(--primary);
 }
 
 /* --Figures-- */
 figure {
   margin: 0;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 figure img {
   width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  height: 250px;
   display: block;
   transition: transform 0.4s;
 }
