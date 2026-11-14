@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Key facts and current weather for Ghana, West-Africa">
+    <meta name="author" content="Teye Collins">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Country Page | Teye Collins | WDD 131</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-media.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>GHANA</h1>
+    </header>
+    <main>
+        <picture>
+            <source media="(min-width: 700px") srcset="images/ghana-large.webp">
+            <img src="images/ghana-small.webp" alt="Cultural Display in Ghana" width="600" height="800">
+        </picture>
+        <section class="data">
+            <h2>Data</h2>
+            <p><span class="label">Area:</span><span>238,533 sq.km</span></p>
+            <p><span class="label">Population:</span><span>31,832,019</span></p>
+            <p><span class="label">Capital:</span><span>Accra</span></p>
+            <p><span class="label">Languages:</span><span>English, Akan, Ewe, Ga-Adangbe etc.</span></p>
+            <p><span class="label">Currency:</span><span>Ghanaian Cedi</span></p>
+            <p><span class="label">Calling Code:</span><span>+233</span></p>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Partly Cloudy" width="80" height="80">
+            <p><span class="label">Temperature:</span> <span><span id="temp">28</span>°C</span></p>
+            <p><span class="label">Conditions:</span> <span>Partly Cloudy</span></p>
+            <p><span class="label">Wind:</span> <span><span id="wind">12</span>km/h</span></p>
+            <p><span class="label">Wind Chill:</span> <span id="windchill"></span></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span>, Teye Collins, Ghana.</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
