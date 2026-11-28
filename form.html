@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your experience with our products by submitting a product review form. Built by Teye Collins for WDD 131.">
+    <meta name="author" content="Teye Collins">
+    <title>Product Review | Teye Collins | WDD 131</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <div class="field">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <fieldset class="rating">
+                <legend>Overall Rating</legend>
+                <div class="stars">
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1">&star;</label>
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2">&star;&star;</label>
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3">&star;&star;&star;</label>
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4">&star;&star;&star;&star;</label>
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5">&star;&star;&star;&star;&star;</label>
+                </div>
+            </fieldset>
+
+            <div class="field">
+                <label for="installdate">Date of Installation</label>
+                <input type="date" id="installdate" name="installdate" required>
+            </div>
+
+            <fieldset>
+                <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
+                <div class="check">
+                    <input type="checkbox" id="durability" name="features" value="durability">
+                    <label for="durability">Durability</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="ease" name="features" value="ease-of-use">
+                    <label for="ease">Ease of Use</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="performance" name="features" value="performance">
+                    <label for="performance">Performance</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="design" name="features" value="design">
+                    <label for="design">Design</label>
+                </div>
+            </fieldset>
+
+            <div class="field">
+                <label for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="review" name="review" rows="6"></textarea>
+            </div>
+
+            <div class="field">
+                <label for="username">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Teye Collins, Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

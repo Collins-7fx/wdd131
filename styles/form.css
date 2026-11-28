@@ -1,0 +1,195 @@
+/* --Variables-- */
+:root {
+  --primary: #1d3557;
+  --accent: #e9a820;
+  --page: #f5f6fa;
+  --card: #e4e7ee;
+  --border: #b8bfce;
+  --text: #1a1a1a;
+  --white: #ffffff;
+  --font-heading: "YOUR HEADING FONT", sans-serif;
+  --font-body: "YOUR BODY FONT", sans-serif;
+}
+
+/* --Base-- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--page);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--font-heading);
+}
+
+/* --Header and footer-- */
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* --Main and form card-- */
+main {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+fieldset {
+  border: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: 0.4rem;
+  padding: 0;
+  font-weight: 700;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--primary);
+}
+
+/* --Text-style fields-- */
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--white);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* --Star rating-- */
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.star {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.star label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+/* --Radio and checkboxes-- */
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+}
+
+.check label {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --Submit button-- */
+input[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: var(--white);
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--primary);
+}
+
+/* --Wide view-- */
+@media (min-width: 700px) {
+  main {
+    max-width: 640px;
+    padding: 2rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  form {
+    padding: 2rem;
+  }
+
+  .star label {
+    font-size: 1rem;
+  }
+}
